@@ -11,10 +11,7 @@ import { RouterLink, RouterView } from "vue-router";
       width="125"
       height="125"
     />
-
     <div class="wrapper">
-      <HelloWorld msg="You did it!" />
-
       <nav>
         <RouterLink to="/">Home</RouterLink>
         <RouterLink to="/about">About</RouterLink>
@@ -22,9 +19,38 @@ import { RouterLink, RouterView } from "vue-router";
     </div>
   </header>
 
+  <div class="container">
+    <div class="card">
+      <input 
+        @change="toogleTheme"
+        id="checkbox"
+        type="checkbox"
+        class="switch-checkbox"
+      />
+      <label for="checkbox" class="switch-label">
+        <span>D</span>
+        <span>L</span>
+        <div
+          class="switch-toogle"
+          :class="{'switch-toogle-checked': userTheme === 'dark-theme'}"  
+        ></div>
+      </label>"
+    </div>
+  </div>
   <RouterView />
 </template>
 
-<style scoped>
+<script>
+export default {
+  mounted() {
+    const initUSerTheme = this.getMediaPreference();
+    this.setTheme(initUSerTheme);
+  },
 
-</style>
+  data() {
+    return {
+      userTheme: "light-theme",
+    };
+  },
+};
+</script>

@@ -95,3 +95,20 @@ nav a:first-of-type {
     margin-top: 1rem;
   }
 }
+
+html, body {
+  padding : 0;
+  margin: 0;
+}
+
+:root {
+  --background-color-primary: #ebebeb;
+  --background-color-secondary: #fafafa;
+  --accent-color: #cacaca;
+  --text-primary-color: #ddd;
+}
+
+p {
+  color: var(--text-primary-color);
+}
+
