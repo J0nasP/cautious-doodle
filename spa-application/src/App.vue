@@ -1,6 +1,8 @@
 <script setup>
 import { RouterLink, RouterView } from "vue-router";
 import ThemeButtonVue from "./components/ThemeButton.vue";
+import TeamCreationVue from "./components/TeamCreation.vue";
+
 </script>
 
 <template>
@@ -14,6 +16,7 @@ import ThemeButtonVue from "./components/ThemeButton.vue";
       </nav>
     </div>
   </header>
+  
   <RouterView/>
 </template>
 

@@ -35,7 +35,6 @@ const toggleTheme = (): void => {
 const userTheme = ref<UserTheme>(getTheme() || getMediaPreference());
 
 onMounted(() => setTheme(userTheme.value));
-
 </script>
 
 <template>
