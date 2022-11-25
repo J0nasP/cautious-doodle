@@ -25,14 +25,17 @@ const getMediaPreference = (): UserTheme => {
 
 const toggleTheme = (): void => {
     const activeTheme = localStorage.getItem('user-theme');
+    debugger
     if (activeTheme === 'light') {
+        debugger
         setTheme('dark')
     } else {
+        debugger
         setTheme('light')
     }
 }
 
-const userTheme = ref<UserTheme>(getTheme() || getMediaPreference());
+const userTheme = ref<UserTheme>(getTheme());
 
 onMounted(() => setTheme(userTheme.value));
 </script>
